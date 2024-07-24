@@ -29,7 +29,8 @@ function addBookToLibrary() {
 
     //store the values to the constructor
     let BookAdded = new Book(author, title, numOfPages, read);
-    console.log(BookAdded);
+    myLibrary.push(BookAdded);
+    console.log(myLibrary);
 }
 
 addBookForm.addEventListener("submit", function () {
