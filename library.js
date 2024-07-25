@@ -30,16 +30,17 @@ function Book( author, title, numOfPages, read) {
 }
 
 function addBookToLibrary() {
+
     // store the user input values into the specific variable
     let author = document.querySelector("#author").value;
     let title = document.querySelector("#title").value;
     let numOfPages = document.querySelector("#number_of_pages").value;
     let read = document.querySelector("#read").checked;
-
+    
     //store the values to the constructor
     let BookAdded = new Book(author, title, numOfPages, read);
     myLibrary.push(BookAdded);
-    displayBook(); 
+    displayBook();
 }
 
 // for every element added in the Library dispay a specific card div with its data
