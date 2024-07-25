@@ -45,10 +45,19 @@ function displayBook() {
          <h2> Author:  ${book_i.author} </h2>
          <h3> Title: ${book_i.title} </h3>
          <h4> Pages: ${book_i.numOfPages} </h4>
-         <h5> ${book_i.read ? "Read" : "Not Read"} </h5>`
+         <h5> ${book_i.read ? "Read" : "Not Read"} </h5>
+         <button onclick="removeBook(${i})"> <i class="fa fa-trash-o" style="font-size:20px"></i> </button>`
 
         bookDisplayDiv.appendChild(book_i_card);     
     }
+}
+
+
+// remove a book when the delete button is clicked
+function removeBook(index) {
+    
+    myLibrary.splice(index, 1);
+    displayBook();
 }
 
 

@@ -24,7 +24,7 @@
 }
 
 
-#new_book, #add_book {
+#new_book, #add_book, #book_card button{
     padding: 10px;
     border: 1px dashed #121212;
     background-color: #00ffdd;
@@ -67,7 +67,13 @@ form label{
 }
 
     #book_card h2, h3, h4, h5 {
+        text-align:center;
        
+    }
+
+    #book_card button{
+        display:block;
+        text-align:right;
     }
 
 
