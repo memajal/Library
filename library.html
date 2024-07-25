@@ -11,32 +11,49 @@
 
 </head>
 <body>
-   <div id="container">
-      <div id="user_form">
-        <button id="new_book"> NEW BOOK</button>
+    <h1> My Library</h1>
+    <div id="container">
+
+        <div id="add_book_button">
+            <button id="new_book"> Add a BOOK</button>
+        </div>
 
         <form id="form" style="display:none;">
 
             <label for="author"> Author</label>
-            <input type="text" id="author" />
+            <input type="text" id="author" required/>
 
             <label for="title">Title</label>
-            <input type="text" id="title" />
+            <input type="text" id="title" required/>
 
             <label for="number_of_pages"> Number of Pages</label>
-            <input type="number" min="1" id="number_of_pages" />
+            <input type="number" min="1" id="number_of_pages" required />
 
+            <div>
             <label for="read">Read</label>
             <input type="checkbox" id="read" />
+            </div>
 
-            <input type="submit" value="Add Book" id="add_book"/>
+            <div id="form_buttons">
+               <input type="submit" value="Add Book" id="add_book" />
+               <input type="submit" value="Cancel" id="cancel" />
+                </div>
 
         </form>
+       
+
+        <div id="book_display">
+            <div id="book_card">
+                <h2> Author: Daniel Servantes  </h2>
+                <h3> Title: Don Kishoti I Manches </h3>
+                <h4> Pages: 540 </h4>
+                <div id="card_buttons">
+                    <button id="toogle_button"> Read</button>
+                    <button id="delete_button"> <i class="fa fa-trash-o" style="font-size:20px"></i> </button>
+                </div>
+            </div>
+       </div>
     </div>
 
-    <div id="book_display">
-       
-    </div>
-</div>
 </body>
 </html>

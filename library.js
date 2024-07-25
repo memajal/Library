@@ -1,9 +1,18 @@
 
 let newBookButton = document.querySelector("#new_book"); //select new Book button
 let addBookForm = document.querySelector("#form"); // select form
+let cancelButton = document.querySelector("#cancel")
+
+
+cancelButton.addEventListener("click", function () {
+    newBookButton.style.display = "initial";
+    addBookForm.style.display = "none";
+}
+);
 
 // display the form when the user click the new book button
-    newBookButton.addEventListener("click", function () {
+newBookButton.addEventListener("click", function () {
+    newBookButton.style.display = "none";
     addBookForm.style.display = "flex";
     }
     );

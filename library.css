@@ -1,29 +1,158 @@
-﻿body {
-    font-family: 'Times New Roman', sans-serif;
+﻿@import '../Css_Normalize/node_modules/modern-normalize/modern-normalize.css';
+
+@font-face {
+    font-family: "font";
+    src: url("Ohayo.otf");
+    font-weight: normal;
+    font-style: normal;
 }
 
-#container{
-    display:flex;
-    flex-direction:row;
-    justify-content:space-around;
-    margin-top:50px;
+img {
+    display: block;
+    max-inline-size: 100%;
 }
 
-#user_form {
-    width: 30%;
-    text-align:center;
+h1, h2, h3, h4, h5, figure, p, ol, ul {
+    margin: 0;
+}
+
+
+
+body {
+    font-family: font, sans-serif;
+    width: 80%;
+    height: calc(100vh - 5px) !important;
+    margin: 5px auto;
+    background-color: #E5E5E5;
+    text-align: center;
+}
+
+
+    body h1 {
+        text-align: center;
+        color: #934A5F;
+        background-color: #C2B4D6;
+        font-size: 45px;
+        margin-top: 0px;
+        margin-bottom:0px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+
+
+#add_book_button {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #57648C;
+
+}
+
+#new_book, form input[type=submit] {
+    padding: 10px;
+    margin-bottom: 0px;
+    border: 1px dashed #121212;
+    background-color: #934A5F;
+    font-family: font, sans-serif;
+    font-size: 20px;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+    #new_book:hover, #add_book:hover, #cancel:hover {
+        background-color: #C2B4D6;
+        color: #934A5F;
+    }
+
+form {
+    background-color: #57648C;
+    margin-top: -50px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    form label {
+        color: white;
+        font-size: 2em;
+        margin-top: 10px;
+    }
+
+    form input[type=text], input[type=number] {
+        width: 50%;
+        height: 35px;
+        border: 2px solid #934A5F;
+    }
+
+    form input[type=checkbox] {
+        margin-top:10px;
+        width: 30px;
+        height: 30px;
+    }
+
+#form_buttons {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 50px;
 }
 
 #book_display {
-    width: 60%;
-    margin-top: 55px;
+    margin-top:20px;
+    background-color: #C2B4D6;
     display:flex;
     flex-direction:row;
     flex-wrap:wrap;
-    gap: 10px;
+    gap: 20px;   
+}
+
+#book_card {
+    border: 2px solid #934A5F;
+    width: auto;
+    height: auto;
+    padding: 20px;
+}
+
+    #book_card h2, h3, h4, h5 {
+        text-align: center;
+        margin: 5px;
+    }
+
+    #book_card h2 {
+      color:#934A5F;
+    }
+
+    #book_card h4 {
+        color: #57648C;
+    }
+
+
+#toogle_button, #delete_button {
+    padding: 10px;
+    border: 1px solid #934A5F;
+    background-color: #E5E5E5;
+    font-family: font, sans-serif;
+    color: #934A5F;
+    cursor:pointer;
+}
+
+    #toogle_button:hover, #delete_button:hover {
+        background-color: #57648C;
+        color: white;
+    }
+
+#card_buttons {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 
+/*
 #new_book, #add_book, #delete_button {
     padding: 10px;
     border: 1px dashed #121212;
@@ -66,25 +195,7 @@ form label{
     padding: 20px;
 }
 
-    #book_card h2, h3, h4, h5 {
-        text-align:center;
-       
-    }
-
-
-#toogle_button {
-    padding: 10px;
-    border: 1px dashed #121212;
-    background-color: white;
-    font-family: Tahoma sans-serif;
-    color: #121212;
-}
-
-#card_buttons{
-    display:flex;
-    flex-direction:row;
-    justify-content:space-between;
-}
+   
 
 
 
