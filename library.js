@@ -45,13 +45,25 @@ function displayBook() {
          <h2> Author:  ${book_i.author} </h2>
          <h3> Title: ${book_i.title} </h3>
          <h4> Pages: ${book_i.numOfPages} </h4>
-         <h5> ${book_i.read ? "Read" : "Not Read"} </h5>
-         <button onclick="removeBook(${i})"> <i class="fa fa-trash-o" style="font-size:20px"></i> </button>`
+         <div id="card_buttons">
+         <button id="toogle_button" onclick="toogleButton(${i})">  ${book_i.read ? "Read" : "Not Read"}</button>
+         <button id="delete_button" onclick="removeBook(${i})"> <i class="fa fa-trash-o" style="font-size:20px"></i> </button>
+         </div>`
 
-        bookDisplayDiv.appendChild(book_i_card);     
+        bookDisplayDiv.appendChild(book_i_card);
     }
 }
 
+
+Book.prototype.toogleButton = function () {
+    this.read = !this.read;
+}
+
+function toogleButton(index) {
+    myLibrary[index].toogleButton();
+    displayBook();
+
+}
 
 // remove a book when the delete button is clicked
 function removeBook(index) {

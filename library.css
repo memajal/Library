@@ -24,7 +24,7 @@
 }
 
 
-#new_book, #add_book, #book_card button{
+#new_book, #add_book, #delete_button {
     padding: 10px;
     border: 1px dashed #121212;
     background-color: #00ffdd;
@@ -71,11 +71,20 @@ form label{
        
     }
 
-    #book_card button{
-        display:block;
-        text-align:right;
-    }
 
+#toogle_button {
+    padding: 10px;
+    border: 1px dashed #121212;
+    background-color: white;
+    font-family: Tahoma sans-serif;
+    color: #121212;
+}
+
+#card_buttons{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+}
 
 
 
