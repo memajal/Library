@@ -30,9 +30,10 @@ function addBookToLibrary() {
     //store the values to the constructor
     let BookAdded = new Book(author, title, numOfPages, read);
     myLibrary.push(BookAdded);
-    displayBook();
+    displayBook(); 
 }
 
+// for every element added in the Library dispay a specific card div with its data
 function displayBook() {
     let bookDisplayDiv = document.querySelector("#book_display");
     bookDisplayDiv.innerHTML = "";
@@ -41,7 +42,7 @@ function displayBook() {
         let book_i_card = document.createElement("div");
         book_i_card.id = "book_card";
         book_i_card.innerHTML = `
-         <h2> Author: ${book_i.author} </h2>
+         <h2> Author:  ${book_i.author} </h2>
          <h3> Title: ${book_i.title} </h3>
          <h4> Pages: ${book_i.numOfPages} </h4>
          <h5> ${book_i.read ? "Read" : "Not Read"} </h5>`
